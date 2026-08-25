@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="STIFIn Nature Sangatta — informasi, video, testimoni dan konsultasi Tes STIFIn bersama Buya Zuhdah.">
-<title>V12.1 FINAL • STIFIn Nature Sangatta | Kenali Potensi Diri</title>
+<title>V12.2 • STIFIn Genetic Nature Sangatta — Premium</title>
 <style>
 :root{--navy:#082b63;--blue:#1267d8;--green:#2e8b57;--gold:#f4b51b;--cream:#fffaf0;--text:#17304f;--muted:#627189;--white:#fff;--shadow:0 14px 40px rgba(8,43,99,.12);--r:24px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:#f7fbff;line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
@@ -386,6 +386,201 @@ section{background:linear-gradient(180deg,rgba(255,255,255,.70),rgba(239,248,241
 .v121-color-legend span{display:inline-flex;align-items:center;gap:5px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(201,154,46,.18)}
 .v121-color-legend i{width:9px;height:9px;border-radius:50%;display:inline-block}.v121-color-legend .s{background:#d71920}.v121-color-legend .t{background:#171717}.v121-color-legend .i{background:#1769d2}.v121-color-legend .f{background:#2e8b57}.v121-color-legend .in{background:#e0a800}
 
+
+/* =========================
+   V12.2 — FIVE STIFIn INTELLIGENCE
+   Visual dibuat sebagai CSS/vector-like emblems di dalam HTML,
+   jadi tidak membutuhkan file gambar tambahan.
+   ========================= */
+.v122-five{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+  max-width:1180px;
+  margin:28px auto 0;
+}
+.v122-card{
+  position:relative;
+  overflow:hidden;
+  min-height:390px;
+  padding:22px 17px 20px;
+  text-align:center;
+  border-radius:26px;
+  border:1px solid rgba(201,154,46,.25);
+  background:rgba(255,255,255,.88);
+  box-shadow:0 14px 34px rgba(6,63,43,.10);
+  backdrop-filter:blur(8px);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.v122-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 42px rgba(6,63,43,.15);
+}
+.v122-card:before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;height:6px;
+  background:var(--v122-color);
+}
+.v122-card:after{
+  content:"";
+  position:absolute;
+  width:130px;height:130px;
+  right:-55px;bottom:-55px;
+  border-radius:50%;
+  background:var(--v122-soft);
+  opacity:.8;
+}
+.v122-emblem{
+  position:relative;
+  width:132px;height:132px;
+  margin:8px auto 15px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--v122-soft) 0 50%,rgba(255,255,255,.72) 51% 100%);
+  border:2px solid color-mix(in srgb,var(--v122-color) 45%,white);
+  box-shadow:inset 0 0 0 8px rgba(255,255,255,.72),0 10px 25px rgba(6,63,43,.10);
+}
+.v122-core{
+  position:absolute;
+  width:48px;height:48px;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:var(--v122-color);
+  box-shadow:0 0 0 7px rgba(255,255,255,.8),0 5px 15px rgba(0,0,0,.12);
+}
+.v122-mark{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-weight:950;
+  font-size:24px;
+  z-index:4;
+  letter-spacing:-1px;
+}
+.v122-code{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:42px;height:26px;
+  padding:0 9px;
+  border-radius:99px;
+  background:var(--v122-soft);
+  color:var(--v122-color);
+  font-size:12px;font-weight:900;
+  letter-spacing:.4px;
+}
+.v122-card h3{
+  margin:10px 0 7px;
+  color:var(--v122-color);
+  font-size:20px;
+}
+.v122-card p{
+  color:#647184;
+  font-size:12.5px;
+  line-height:1.58;
+  margin:0 auto;
+  max-width:210px;
+}
+.v122-tags{
+  position:relative;
+  z-index:3;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:15px;
+}
+.v122-tags span{
+  padding:5px 8px;
+  border-radius:99px;
+  background:var(--v122-soft);
+  color:var(--v122-color);
+  font-size:10px;
+  font-weight:800;
+}
+
+/* Sensing — merah: bentuk target/fakta */
+.v122-sensing{--v122-color:#d71920;--v122-soft:#ffe5e7}
+.v122-sensing .v122-ring{
+  position:absolute;inset:23px;border:3px solid #d71920;border-radius:50%;
+}
+.v122-sensing .v122-ring:before,.v122-sensing .v122-ring:after{
+  content:"";position:absolute;background:#d71920;
+}
+.v122-sensing .v122-ring:before{width:3px;height:22px;left:50%;top:-13px}
+.v122-sensing .v122-ring:after{height:3px;width:22px;top:50%;left:-13px}
+
+/* Thinking — hitam: grid/struktur */
+.v122-thinking{--v122-color:#171717;--v122-soft:#ececec}
+.v122-thinking .v122-grid{
+  position:absolute;inset:27px;
+  border:2px solid #171717;border-radius:12px;
+  background:
+    linear-gradient(90deg,transparent 31%,#171717 32% 34%,transparent 35% 65%,#171717 66% 68%,transparent 69%),
+    linear-gradient(transparent 31%,#171717 32% 34%,transparent 35% 65%,#171717 66% 68%,transparent 69%);
+}
+
+/* Intuiting — biru: orbit/visi */
+.v122-intuiting{--v122-color:#1769d2;--v122-soft:#e2efff}
+.v122-intuiting .v122-orbit{
+  position:absolute;left:16px;top:39px;width:100px;height:50px;
+  border:2px solid #1769d2;border-radius:50%;
+}
+.v122-intuiting .one{transform:rotate(30deg)}
+.v122-intuiting .two{transform:rotate(-30deg)}
+.v122-intuiting .v122-core{background:#1769d2}
+
+/* Feeling — hijau: daun/harmoni */
+.v122-feeling{--v122-color:#2e8b57;--v122-soft:#e2f4e9}
+.v122-feeling .v122-leaf{
+  position:absolute;width:48px;height:78px;
+  border:3px solid #2e8b57;
+  border-radius:100% 0 100% 0;
+  left:31px;top:28px;
+  transform:rotate(-32deg);
+}
+.v122-feeling .l2{
+  left:auto;right:31px;transform:rotate(122deg);
+}
+.v122-feeling .v122-core{background:#2e8b57}
+
+/* Insting — kuning: matahari/radial adaptif */
+.v122-insting{--v122-color:#d9a600;--v122-soft:#fff2bd}
+.v122-insting .v122-sun{
+  position:absolute;left:42px;top:42px;width:48px;height:48px;
+  border-radius:50%;background:#e0a800;
+}
+.v122-insting .v122-ray{
+  position:absolute;left:64px;top:20px;width:3px;height:18px;
+  background:#d9a600;border-radius:9px;
+  transform-origin:50% 46px;
+}
+.v122-insting .r1{transform:rotate(45deg)}
+.v122-insting .r2{transform:rotate(-45deg)}
+
+@media(max-width:1050px){
+  .v122-five{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:700px){
+  .v122-five{grid-template-columns:1fr 1fr;gap:12px;padding:0 8px}
+  .v122-card{min-height:350px;padding:19px 12px}
+  .v122-emblem{width:110px;height:110px}
+  .v122-sensing .v122-ring{inset:20px}
+  .v122-thinking .v122-grid{inset:23px}
+  .v122-intuiting .v122-orbit{width:84px;height:43px;left:13px;top:33px}
+  .v122-feeling .v122-leaf{width:39px;height:65px;left:25px;top:24px}
+  .v122-feeling .l2{left:auto;right:25px}
+  .v122-insting .v122-sun{left:35px;top:35px;width:40px;height:40px}
+  .v122-insting .v122-ray{left:54px;top:17px}
+}
+@media(max-width:430px){
+  .v122-five{grid-template-columns:1fr}
+  .v122-card{min-height:320px}
+}
+
+.v122-note{max-width:900px;margin:0 auto 18px;padding:11px 15px;border:1px solid rgba(201,154,46,.28);border-radius:14px;background:linear-gradient(90deg,rgba(255,249,233,.9),rgba(238,248,241,.9));color:#516273;font-size:12px;text-align:center}.v122-note b{color:#087a3b}
 </style>
 </head>
 <body>
@@ -482,14 +677,73 @@ section{background:linear-gradient(180deg,rgba(255,255,255,.70),rgba(239,248,241
   <span><i class="f"></i>Feeling</span>
   <span><i class="in"></i>Insting</span>
 </div>
-<div class="v12-five">
-<div><b>S</b><strong>Sensing</strong><span>Berorientasi pada pengalaman nyata & fakta.</span></div>
-<div><b>T</b><strong>Thinking</strong><span>Cenderung analitis, logis & objektif.</span></div>
-<div><b>I</b><strong>Intuiting</strong><span>Menonjol pada ide, kemungkinan & kreativitas.</span></div>
-<div><b>F</b><strong>Feeling</strong><span>Memperhatikan hubungan, nilai & perasaan.</span></div>
-<div><b>In</b><strong>Insting</strong><span>Cenderung spontan, adaptif & menyeluruh.</span></div>
+
+
+<div class="section-head v122-head">
+  <div class="kicker">Kenali mesin kecerdasan</div>
+  <h2>🧬 5 Kecerdasan STIFIn</h2>
+  <p>Setiap mesin ditampilkan dengan warna identitasnya dan emblem visual berbasis CSS, sehingga halaman tidak membutuhkan file gambar tambahan.</p>
 </div>
-<p class="v12-disclaimer">Catatan: uraian di atas adalah penjelasan ringkas untuk edukasi. Hasil tes sebaiknya dipahami sesuai penjelasan promotor dan tidak digunakan sebagai satu-satunya dasar keputusan penting.</p>
+
+<div class="v122-note">🎨 <b>5 Kecerdasan STIFIn</b> — visual ilustrasi dibuat langsung di dalam file HTML, sehingga <b>tidak membutuhkan file gambar tambahan</b>.</div>
+<div class="v122-five">
+  <article class="v122-card v122-sensing">
+    <div class="v122-emblem">
+      <span class="v122-ring"></span><span class="v122-core"></span>
+      <span class="v122-mark">S</span>
+    </div>
+    <div class="v122-code">S</div>
+    <h3>Sensing</h3>
+    <p>Fokus pada pengalaman nyata, fakta, detail, keteraturan dan tindakan praktis.</p>
+    <div class="v122-tags"><span>Merah</span><span>Fakta</span><span>Praktis</span></div>
+  </article>
+
+  <article class="v122-card v122-thinking">
+    <div class="v122-emblem">
+      <span class="v122-grid"></span><span class="v122-core"></span>
+      <span class="v122-mark">T</span>
+    </div>
+    <div class="v122-code">T</div>
+    <h3>Thinking</h3>
+    <p>Menonjol pada logika, analisis, objektivitas, struktur dan pemecahan masalah.</p>
+    <div class="v122-tags"><span>Hitam</span><span>Logis</span><span>Analitis</span></div>
+  </article>
+
+  <article class="v122-card v122-intuiting">
+    <div class="v122-emblem">
+      <span class="v122-orbit one"></span><span class="v122-orbit two"></span>
+      <span class="v122-core"></span><span class="v122-mark">I</span>
+    </div>
+    <div class="v122-code">I</div>
+    <h3>Intuiting</h3>
+    <p>Menonjol pada ide, kemungkinan, visi, kreativitas dan melihat gambaran besar.</p>
+    <div class="v122-tags"><span>Biru</span><span>Ide</span><span>Visi</span></div>
+  </article>
+
+  <article class="v122-card v122-feeling">
+    <div class="v122-emblem">
+      <span class="v122-leaf l1"></span><span class="v122-leaf l2"></span>
+      <span class="v122-core"></span><span class="v122-mark">F</span>
+    </div>
+    <div class="v122-code">F</div>
+    <h3>Feeling</h3>
+    <p>Memperhatikan hubungan, nilai, empati, harmoni dan dinamika perasaan.</p>
+    <div class="v122-tags"><span>Hijau</span><span>Empati</span><span>Harmoni</span></div>
+  </article>
+
+  <article class="v122-card v122-insting">
+    <div class="v122-emblem">
+      <span class="v122-sun"></span><span class="v122-ray r1"></span><span class="v122-ray r2"></span>
+      <span class="v122-core"></span><span class="v122-mark">In</span>
+    </div>
+    <div class="v122-code">In</div>
+    <h3>Insting</h3>
+    <p>Cenderung spontan, adaptif, menyeluruh dan cepat membaca situasi.</p>
+    <div class="v122-tags"><span>Kuning</span><span>Adaptif</span><span>Spontan</span></div>
+  </article>
+</div>
+<p class="v12-disclaimer">
+Catatan: uraian di atas adalah penjelasan ringkas untuk edukasi. Hasil tes sebaiknya dipahami sesuai penjelasan promotor dan tidak digunakan sebagai satu-satunya dasar keputusan penting.</p>
 </div>
 </section>
 
