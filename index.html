@@ -75,6 +75,13 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 @media(max-width:850px){.flow-grid{grid-template-columns:1fr 1fr}.v8-highlight{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.flow-grid,.social-grid{grid-template-columns:1fr}.v8-highlight{padding:23px}}
 
+
+.v9-premium{background:#fff}.premium-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.premium-card{background:#f7fbff;border:1px solid #e1eaf4;border-radius:26px;padding:28px;box-shadow:0 10px 28px rgba(8,43,99,.07);transition:transform .2s}.premium-card:hover{transform:translateY(-4px)}.premium-card.featured{border:2px solid #d8eadf}.premium-icon{font-size:36px}.premium-card h3{color:var(--navy);font-size:21px;margin:12px 0 7px}.premium-card p{color:var(--muted);font-size:14px;min-height:48px}.text-link{display:inline-block;margin-top:13px;color:var(--blue);font-weight:900}
+.v9-stats{background:linear-gradient(135deg,var(--navy),#0b4e9f);padding:30px 0}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stats-grid div{text-align:center;color:#fff;padding:14px}.stats-grid strong{display:block;font-size:28px;line-height:1.1}.stats-grid span{display:block;color:#dceaff;font-size:12px;margin-top:5px}
+.v9-sticky{display:none}
+@media(max-width:800px){.premium-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.premium-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.v9-sticky{position:fixed;display:flex;align-items:center;justify-content:space-between;gap:12px;left:0;right:0;bottom:0;padding:9px 12px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid #dce6f1;box-shadow:0 -8px 25px rgba(8,43,99,.12);z-index:1000}.v9-sticky strong{display:block;font-size:12px;color:var(--navy)}.v9-sticky span{display:block;font-weight:950;color:var(--green);font-size:15px}.v9-sticky .btn{padding:10px 16px;font-size:13px}}
+
 </style>
 </head>
 <body>
@@ -207,6 +214,24 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 </div></div></section>
 
 
+
+<section id="premium" class="v9-premium">
+<div class="container">
+<div class="section-head"><div class="kicker">STIFIn Nature Sangatta</div><h2>✨ Pengalaman Landing Page yang Lebih Profesional</h2><p>Informasi dibuat ringkas, jelas, dan diarahkan agar calon peserta mudah mengambil langkah berikutnya.</p></div>
+<div class="premium-grid">
+<div class="premium-card featured"><div class="premium-icon">🧬</div><h3>Kenali Potensi</h3><p>Gunakan pemetaan sebagai bahan refleksi untuk memahami kecenderungan diri.</p><a href="#promo" class="text-link">Lihat paket →</a></div>
+<div class="premium-card"><div class="premium-icon">🤝</div><h3>Dapatkan Pendampingan</h3><p>Konsultasikan proses, jadwal, dan pertanyaan Anda sebelum mendaftar.</p><a href="#daftar" class="text-link">Konsultasi →</a></div>
+<div class="premium-card"><div class="premium-icon">🎯</div><h3>Ambil Langkah</h3><p>Isi form singkat dan lanjutkan pendaftaran melalui WhatsApp.</p><a href="#daftar" class="text-link">Daftar →</a></div>
+</div></div></section>
+
+<section class="v9-stats">
+<div class="container">
+<div class="stats-grid">
+<div><strong>Rp500K</strong><span>Harga Promo</span></div>
+<div><strong>5</strong><span>Bonus & Fasilitas</span></div>
+<div><strong>4</strong><span>Langkah Proses</span></div>
+<div><strong>1</strong><span>Pintu Konsultasi WhatsApp</span></div>
+</div></div></section>
 <section id="alur" class="v8-flow">
 <div class="container">
 <div class="section-head"><div class="kicker">Proses sederhana</div><h2>🚀 Bagaimana Prosesnya?</h2><p>Dari konsultasi sampai mendapatkan hasil, semuanya dibuat mudah dipahami.</p></div>
@@ -294,5 +319,10 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 <a class="btn btn-wa mobile-wa" href="https://wa.me/6282354609993?text=Assalamu%27alaikum%20Buya%20Zuhdah%2C%20saya%20ingin%20konsultasi%20STIFIn." target="_blank">💬 Konsultasi WhatsApp — 0823-5460-9993</a>
 
 <a class="wa-float" href="https://wa.me/6282354609993?text=Assalamu%27alaikum%20Buya%20Zuhdah%2C%20saya%20tertarik%20dengan%20Tes%20STIFIn%20Nature%20Rp500.000.%20Mohon%20info%20pendaftarannya." target="_blank" aria-label="WhatsApp">💬</a>
+
+<div class="v9-sticky">
+<div><strong>Promo Tes STIFIn</strong><span>Rp500.000</span></div>
+<a class="btn btn-wa" href="#daftar">📲 Daftar</a>
+</div>
 </body>
 </html>
