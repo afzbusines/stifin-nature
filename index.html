@@ -82,6 +82,10 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 @media(max-width:800px){.premium-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.premium-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.v9-sticky{position:fixed;display:flex;align-items:center;justify-content:space-between;gap:12px;left:0;right:0;bottom:0;padding:9px 12px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid #dce6f1;box-shadow:0 -8px 25px rgba(8,43,99,.12);z-index:1000}.v9-sticky strong{display:block;font-size:12px;color:var(--navy)}.v9-sticky span{display:block;font-weight:950;color:var(--green);font-size:15px}.v9-sticky .btn{padding:10px 16px;font-size:13px}}
 
+
+.v10-crm{background:#f4f9ff}.crm-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.crm-form,.crm-list{background:#fff;padding:25px;border-radius:24px;box-shadow:0 12px 35px rgba(8,43,99,.08);border:1px solid #e1eaf4}.crm-form h3,.crm-list h3{color:var(--navy);margin-bottom:18px}.crm-form label{display:block;font-weight:800;color:var(--navy);font-size:13px;margin-bottom:12px}.crm-form input,.crm-form select{width:100%;box-sizing:border-box;margin-top:6px;padding:12px;border:1px solid #d9e4f0;border-radius:12px;font:inherit}.crm-form .btn{width:100%;margin-top:8px}.crm-list-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.crm-list-head .btn{padding:8px 12px;font-size:12px}.crm-row{display:grid;grid-template-columns:1fr 145px 42px 34px;gap:8px;align-items:center;border-top:1px solid #edf2f7;padding:13px 0}.crm-row strong{display:block;color:var(--navy);font-size:14px}.crm-row small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.crm-status{padding:9px;border:1px solid #d9e4f0;border-radius:10px;font-size:12px}.crm-wa,.crm-del{border:0;border-radius:10px;height:38px;cursor:pointer;font-weight:900}.crm-wa{background:#e9f8ef;color:#087a3b}.crm-del{background:#fff0f0;color:#b33}.crm-empty{color:var(--muted);font-size:14px;padding:25px 0;text-align:center}
+@media(max-width:800px){.crm-grid{grid-template-columns:1fr}}@media(max-width:560px){.crm-row{grid-template-columns:1fr 120px 38px 30px}.crm-list{padding:18px}.crm-form{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -139,6 +143,33 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
   </div>
 </section>
 
+
+<section id="followup" class="v10-crm">
+<div class="container">
+<div class="section-head">
+<div class="kicker">Manajemen calon peserta</div>
+<h2>📋 Follow-Up Lebih Terarah</h2>
+<p>Gunakan panel sederhana ini untuk mencatat calon peserta di perangkat Anda. Data tersimpan lokal di browser, bukan di server.</p>
+</div>
+<div class="crm-grid">
+<div class="crm-form card">
+<h3>➕ Tambah Calon Peserta</h3>
+<form id="crmForm">
+<label>Nama<input id="crmNama" required placeholder="Nama calon peserta"></label>
+<label>WhatsApp<input id="crmWa" required placeholder="0823xxxxxxx"></label>
+<label>Kota<input id="crmKota" placeholder="Sangatta"></label>
+<label>Status<select id="crmStatus"><option>Baru</option><option>Sudah Dihubungi</option><option>Follow-Up</option><option>Terdaftar</option><option>Selesai Tes</option></select></label>
+<button class="btn btn-primary" type="submit">💾 Simpan Calon Peserta</button>
+</form>
+</div>
+<div class="crm-list card">
+<div class="crm-list-head"><h3>👥 Daftar Calon Peserta</h3><button class="btn btn-outline" type="button" id="crmClear">Hapus Semua</button></div>
+<div id="crmRows"></div>
+</div>
+</div>
+<p class="micro">Privasi: fitur ini menggunakan <b>localStorage</b>. Data hanya tersimpan pada browser/perangkat yang digunakan dan tidak otomatis terkirim ke Anda.</p>
+</div>
+</section>
 <section id="daftar" class="lead-section">
 <div class="container">
 <div class="section-head">
@@ -324,5 +355,34 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 <div><strong>Promo Tes STIFIn</strong><span>Rp500.000</span></div>
 <a class="btn btn-wa" href="#daftar">📲 Daftar</a>
 </div>
+
+<script>
+(function(){
+const KEY='stifin_nature_v10_leads';
+const $=id=>document.getElementById(id);
+const load=()=>JSON.parse(localStorage.getItem(KEY)||'[]');
+const save=data=>localStorage.setItem(KEY,JSON.stringify(data));
+function render(){
+ const rows=$('crmRows'); if(!rows)return;
+ const data=load();
+ if(!data.length){rows.innerHTML='<div class="crm-empty">Belum ada calon peserta yang dicatat.</div>';return;}
+ rows.innerHTML=data.map((x,i)=>`
+ <div class="crm-row">
+   <div><strong>${esc(x.nama)}</strong><small>${esc(x.wa)}${x.kota?' • '+esc(x.kota):''}</small></div>
+   <select data-i="${i}" class="crm-status">${['Baru','Sudah Dihubungi','Follow-Up','Terdaftar','Selesai Tes'].map(s=>`<option ${s===x.status?'selected':''}>${s}</option>`).join('')}</select>
+   <button type="button" class="crm-wa" data-wa="${esc(x.wa)}" data-nama="${esc(x.nama)}">💬</button>
+   <button type="button" class="crm-del" data-i="${i}">×</button>
+ </div>`).join('');
+ document.querySelectorAll('.crm-status').forEach(el=>el.onchange=e=>{const d=load();d[+e.target.dataset.i].status=e.target.value;save(d);});
+ document.querySelectorAll('.crm-del').forEach(el=>el.onclick=e=>{const d=load();d.splice(+e.target.dataset.i,1);save(d);render();});
+ document.querySelectorAll('.crm-wa').forEach(el=>el.onclick=()=>{let n=el.dataset.wa.replace(/\D/g,'');if(n.startsWith('0'))n='62'+n.slice(1);window.open('https://wa.me/'+n+'?text='+encodeURIComponent('Assalamu\'alaikum '+el.dataset.nama+', saya dari STIFIn Nature Sangatta. Mohon info jika masih berminat dengan Tes STIFIn.'),'_blank');});
+}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+$('crmForm')?.addEventListener('submit',e=>{e.preventDefault();const d=load();d.unshift({nama:$('crmNama').value.trim(),wa:$('crmWa').value.trim(),kota:$('crmKota').value.trim(),status:$('crmStatus').value});save(d);e.target.reset();render();});
+$('crmClear')?.addEventListener('click',()=>{if(confirm('Hapus semua data calon peserta di browser ini?')){localStorage.removeItem(KEY);render();}});
+render();
+})();
+</script>
+
 </body>
 </html>
