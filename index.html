@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="STIFIn Nature Sangatta — informasi, video, testimoni dan konsultasi Tes STIFIn bersama Buya Zuhdah.">
-<title>V10.2 • STIFIn Nature Sangatta | Kenali Potensi Diri</title>
+<title>V11 • STIFIn Nature Sangatta | Kenali Potensi Diri</title>
 <style>
 :root{--navy:#082b63;--blue:#1267d8;--green:#2e8b57;--gold:#f4b51b;--cream:#fffaf0;--text:#17304f;--muted:#627189;--white:#fff;--shadow:0 14px 40px rgba(8,43,99,.12);--r:24px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:#f7fbff;line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
@@ -109,6 +109,9 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 .identity-notice{max-width:980px;margin:0 auto 18px;padding:10px 16px;border:1px solid #e4eaf1;border-radius:12px;background:#f8fafc;color:#5f6b7a;font-size:11px;line-height:1.5}
 .identity-notice span:first-child{font-size:15px;margin-right:5px}
 
+
+.v11-register{background:#f4f9ff}.v11-box{max-width:980px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.v11-form,.v11-side{background:#fff;border:1px solid #e1eaf4;border-radius:26px;padding:26px;box-shadow:0 12px 35px rgba(8,43,99,.08)}.v11-form label{display:block;color:var(--navy);font-weight:800;font-size:13px;margin-bottom:14px}.v11-form input:not([type=checkbox]),.v11-form select,.v11-form textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;border:1px solid #d9e4f0;border-radius:12px;padding:12px;font:inherit;color:#17304f;background:#fff}.v11-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.v11-check{display:flex!important;gap:9px;align-items:flex-start;font-weight:600!important;color:#657189!important}.v11-check input{margin-top:2px;accent-color:#087a3b}.v11-submit{width:100%;border:0;cursor:pointer}.v11-price{background:linear-gradient(135deg,#eff9f2,#fff);border:1px solid #cfe7d7;border-radius:20px;padding:20px;text-align:center}.v11-price span,.v11-price small{display:block;color:#657189}.v11-price s{display:block;color:#8a94a3;margin:5px}.v11-price strong{display:block;color:#087a3b;font-size:36px;line-height:1.1}.v11-side h3{color:var(--navy);margin:22px 0 10px}.v11-side ul{list-style:none;padding:0;margin:0}.v11-side li{padding:8px 0;color:#40516a}.v11-note{margin-top:18px;padding:12px;border-radius:13px;background:#f7f9fc;color:#657189;font-size:11px;line-height:1.5}@media(max-width:800px){.v11-box{grid-template-columns:1fr}}@media(max-width:560px){.v11-row{grid-template-columns:1fr}.v11-form,.v11-side{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -185,6 +188,58 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 </section>
 
 
+
+<section id="daftar-v11" class="v11-register">
+<div class="container">
+<div class="section-head">
+<div class="kicker">Pendaftaran</div>
+<h2>📝 Daftar Tes STIFIn dengan Mudah</h2>
+<p>Isi data singkat di bawah. Setelah menekan tombol, WhatsApp akan terbuka dengan format pesan pendaftaran yang sudah disiapkan.</p>
+</div>
+<div class="v11-box">
+<form id="v11Form" class="v11-form">
+<div class="v11-row">
+<label>Nama Lengkap *<input id="v11Nama" required placeholder="Contoh: Ahmad Fauzi"></label>
+<label>No. WhatsApp *<input id="v11Wa" required inputmode="tel" placeholder="08xxxxxxxxxx"></label>
+</div>
+<div class="v11-row">
+<label>Usia *<input id="v11Usia" required type="number" min="5" max="100" placeholder="Contoh: 25"></label>
+<label>Kota/Domisili *<input id="v11Kota" required placeholder="Contoh: Sangatta"></label>
+</div>
+<label>Kebutuhan Tes
+<select id="v11Kebutuhan">
+<option>Diri sendiri</option>
+<option>Anak / orang tua</option>
+<option>Pelajar / mahasiswa</option>
+<option>Karier</option>
+<option>Pasangan / keluarga</option>
+<option>Guru / pendidik</option>
+</select></label>
+<label>Pilihan jadwal
+<select id="v11Jadwal">
+<option>Mohon info jadwal terdekat</option>
+<option>Hari kerja</option>
+<option>Sabtu / Minggu</option>
+<option>Menyesuaikan jadwal promotor</option>
+</select></label>
+<label>Catatan tambahan <textarea id="v11Catatan" rows="3" placeholder="Pertanyaan atau kebutuhan khusus (opsional)"></textarea></label>
+<label class="v11-check"><input id="v11Setuju" type="checkbox" required> Saya memahami bahwa pengisian form ini adalah permintaan pendaftaran/konsultasi dan jadwal akan dikonfirmasi melalui WhatsApp.</label>
+<button class="btn btn-wa v11-submit" type="submit">📲 KIRIM DATA KE WHATSAPP</button>
+</form>
+<div class="v11-side">
+<div class="v11-price"><span>Harga Normal</span><s>Rp650.000</s><strong>Rp500.000</strong><small>Harga promo</small></div>
+<h3>🎁 Fasilitas Promo</h3>
+<ul>
+<li>✓ Free sesi penjelasan/konsultasi</li>
+<li>✓ Free sesi tanya jawab</li>
+<li>✓ E-Sertifikat</li>
+<li>✓ Free E-Book Personality Genetik</li>
+</ul>
+<div class="v11-note">🔒 Data form tidak disimpan ke server website. Tombol di atas hanya menyusun pesan untuk dikirim melalui WhatsApp Anda.</div>
+</div>
+</div>
+</div>
+</section>
 <section id="followup" class="v10-crm">
 <div class="container">
 <div class="section-head">
@@ -377,7 +432,7 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 </div></div></section>
 <section class="v7-final-cta">
 <div class="container section-head"><div class="kicker" style="color:#ffd85a">Langkah berikutnya</div><h2>Sudah Siap Mengenal Potensi Diri?</h2><p><s>Rp650.000</s> → <strong>Rp500.000</strong><br>Hemat Rp150.000 • Promo sesuai ketersediaan jadwal.</p>
-<a class="btn btn-wa" href="#daftar">📲 DAFTAR TES Rp500.000</a></div>
+<a class="btn btn-wa" href="#daftar-v11">📲 DAFTAR TES Rp500.000</a></div>
 </section>
 
 <section class="v8-last">
@@ -394,7 +449,7 @@ section{padding:76px 0}.section-head{text-align:center;max-width:760px;margin:0 
 
 <div class="v9-sticky">
 <div><strong>Promo Tes STIFIn</strong><span>Rp500.000</span></div>
-<a class="btn btn-wa" href="#daftar">📲 Daftar</a>
+<a class="btn btn-wa" href="#daftar-v11">📲 Daftar</a>
 </div>
 
 <script>
@@ -422,6 +477,36 @@ function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;',
 $('crmForm')?.addEventListener('submit',e=>{e.preventDefault();const d=load();d.unshift({nama:$('crmNama').value.trim(),wa:$('crmWa').value.trim(),kota:$('crmKota').value.trim(),status:$('crmStatus').value});save(d);e.target.reset();render();});
 $('crmClear')?.addEventListener('click',()=>{if(confirm('Hapus semua data calon peserta di browser ini?')){localStorage.removeItem(KEY);render();}});
 render();
+})();
+</script>
+
+
+<script>
+(function(){
+const form=document.getElementById('v11Form');
+if(!form)return;
+form.addEventListener('submit',function(e){
+ e.preventDefault();
+ const nama=document.getElementById('v11Nama').value.trim();
+ const wa=document.getElementById('v11Wa').value.trim();
+ const usia=document.getElementById('v11Usia').value.trim();
+ const kota=document.getElementById('v11Kota').value.trim();
+ const kebutuhan=document.getElementById('v11Kebutuhan').value;
+ const jadwal=document.getElementById('v11Jadwal').value;
+ const catatan=document.getElementById('v11Catatan').value.trim() || '-';
+ const msg =
+ 'Assalamu\'alaikum Buya Zuhdah,%0A%0A'+
+ '*PENDAFTARAN TES STIFIn NATURE SANGATTA*%0A%0A'+
+ 'Nama: '+encodeURIComponent(nama)+'%0A'+
+ 'WhatsApp: '+encodeURIComponent(wa)+'%0A'+
+ 'Usia: '+encodeURIComponent(usia)+' tahun%0A'+
+ 'Kota/Domisili: '+encodeURIComponent(kota)+'%0A'+
+ 'Kebutuhan Tes: '+encodeURIComponent(kebutuhan)+'%0A'+
+ 'Pilihan Jadwal: '+encodeURIComponent(jadwal)+'%0A'+
+ 'Catatan: '+encodeURIComponent(catatan)+'%0A%0A'+
+ 'Mohon informasi proses dan konfirmasi jadwalnya. Terima kasih.';
+ window.open('https://wa.me/6282354609993?text='+msg,'_blank');
+});
 })();
 </script>
 
